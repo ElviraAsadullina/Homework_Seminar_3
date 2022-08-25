@@ -1,0 +1,12 @@
+﻿Console.WriteLine("Введите координаты первой точки через пробел (в см): ");
+string[] coord1 = Console.ReadLine().Split();
+double.TryParse(coord1[0], out double x1);
+double.TryParse(coord1[1], out double y1);
+double.TryParse(coord1[2], out double z1);
+Console.WriteLine("Введите координаты второй точки через пробел (в см): ");
+string[] coord2 = Console.ReadLine().Split();
+double.TryParse(coord2[0], out double x2);
+double.TryParse(coord2[1], out double y2);
+double.TryParse(coord2[2], out double z2);
+double length = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2));
+Console.WriteLine($"Расстояние между точками равно {length} см.");
